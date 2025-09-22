@@ -1,0 +1,67 @@
+/* Hero - Mobile First */
+.heroSection {
+  margin-bottom: 1rem;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+  max-width: 100%;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.heroText {
+  flex: 1;
+  order: 2; /* Texto después de la imagen en mobile */
+}
+
+.heroImage {
+  flex: 1;
+  order: 1; /* Imagen primero en mobile */
+}
+
+.heroImage img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .heroSection {
+    margin-bottom: 1.5rem;
+  }
+  
+  .heroContainer {
+    margin: 1.5rem auto;
+    max-width: 900px;
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .heroSection {
+    margin-bottom: 2rem;
+  }
+  
+  .heroContainer {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 2rem auto;
+    max-width: 1200px;
+    gap: 2rem;
+    padding: 0;
+  }
+  
+  .heroText {
+    order: 1; /* En desktop el texto vuelve al orden normal */
+  }
+  
+  .heroImage {
+    order: 2; /* En desktop la imagen vuelve al orden normal */
+  }
+}
