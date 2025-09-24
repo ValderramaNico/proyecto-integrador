@@ -1,0 +1,72 @@
+/* Mobile */
+.relevantInfo {
+  position: relative;
+  margin: 2rem 0;
+  width: 100%;
+  background-image: url("assets/images/instalacion-paneles-solares.webp");
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  height: auto;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: 1 columna */
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.relevantCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-tertiary);
+  height: 100px;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.relevantCard.wide {
+  grid-column: span 1; /* mobile: 1 columna */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .relevantInfo {
+    height: 400px; /* altura fija */
+    margin: 3rem 0;
+    padding: 0;
+  }
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    max-width: 800px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .relevantInfo {
+    height: 400px; /* altura fija */
+  }
+
+  .cardsContainer {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    max-width: 1000px;
+  }
+
+  .relevantCard {
+    height: 120px; /* Cards más grandes en desktop */
+  }
+
+  .relevantCard.wide {
+    grid-column: span 3; /* ocupa 3 columnas */
+  }
+}

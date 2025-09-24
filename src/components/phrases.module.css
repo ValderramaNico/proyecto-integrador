@@ -1,0 +1,37 @@
+/* Phrases */
+
+/* mobile */
+.phrases {
+  background: #6c757d;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+.phrases p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .phrases {
+    margin-bottom: 3rem;
+  }
+  .phrases p {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .phrases {
+    margin-bottom: 2rem;
+  }
+  .phrases p {
+    font-size: 1.8rem;
+  }
+}
