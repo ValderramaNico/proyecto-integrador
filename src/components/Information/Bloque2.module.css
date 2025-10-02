@@ -1,0 +1,31 @@
+.bloque2 {
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+.subBloque {
+  text-align: center;
+  flex: 1 1 600px;
+  max-width: 750px;
+}
+
+.subBloque img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.texto {
+  margin-top: 15px;
+}
+
+.texto h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
