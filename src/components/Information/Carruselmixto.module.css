@@ -1,0 +1,143 @@
+.carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 420px;
+  background: #fff;
+}
+
+.carrusel-inner {
+  display: flex;
+  transition: none; /* Quita la animación de scroll */
+  height: 100%;
+}
+
+.carrusel-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.carrusel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+}
+
+.carrusel-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: inherit;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+.carrusel-texto h2 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+.carrusel-texto p {
+  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+}
+.titulo-fijo {
+  text-align: center;
+  margin-top: 16px;
+  padding: 10px;
+  background: transparent; /* Fondo */
+}
+
+.titulo-fijo h2 {
+  font-size: clamp(1.4rem, 2vw, 2rem); /* Ajuste automático de tamaño */
+  margin: 0;
+  color: #333; /* Color del título */
+}
+
+.titulo-fijo p {
+  font-size: clamp(0.9rem, 1.6vw, 1.2rem); /* Ajuste automático de tamaño */
+  margin: 4px 0 0;
+  color: #555; /* Color de la descripción */
+}
+
+.carrusel-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff; 
+}
+
+.carrusel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  background: #fff;
+}
+
+.texto-slide {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 90%;
+}
+
+.carrusel-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 1.8rem;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: inherit;
+}
+
+.carrusel-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carrusel-flecha:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.izquierda {
+  left: 15px;
+}
+
+.derecha {
+  right: 15px;
+}
