@@ -1,40 +1,52 @@
 import styles from "./BlogCards.module.css";
 import { Newspaper, CalendarDays } from 'lucide-react';
-
-
+import { useState, useEffect } from "react";
 
 const BlogCards = () => {
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      "https://magicloops.dev/api/loop/40ce483d-b8d8-4b11-a1ec-7c33d09513c4/run?input=Hello+World"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setArticles(data.articles || []);
+      })
+  }, []);
+
   return (
     <div className={styles.blogCardsContainer}>
-      <article class={styles.blogCard}>
-        <a class={styles.BlogCardLink} href="Link al artículo">
-          <img class={styles.BlogCardImg} src="#" alt="Imagen del artículo" />
-          <div class={styles.BlogCardBody}>
-            <h3 class={styles.BlogCardTitle}>
-              The Economist Destaca a Chile como Ejemplo de Reconversión
-              Energética
-            </h3>
-            <p class={styles.BlogCardExcerpt}>
-              En agosto de 2025, la prestigiosa revista The Economist posicionó
-              a Chile como ejemplo mundial de reconversión energética. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-              nihil iure voluptatum aperiam accusantium, in unde deserunt aut
-              ipsam atque consequatur fugit ea animi id quibusdam, at maiores?
-              Magnam, soluta!
-            </p>
-            <div class={styles.BlogCardMeta}>
-              <div class={styles.metaBlog}>
-                <Newspaper size={30} />
-                <p class="mb-0">Writer: Equipo redacción Octabyte</p>
-              </div>
-              <div class={styles.metaBlog}>
-                <CalendarDays size={30} />
-                <p class="mb-0">Date: 20/10/2025</p>
+      {articles.slice(0,3).map((article, index) => (
+        <article key={index} className={styles.blogCard}>
+          <a className={styles.BlogCardLink} href={article.link || "#"}>
+            <img
+              className={styles.BlogCardImg}
+              src={article.image || "https://via.placeholder.com/400x200"}
+              alt={article.title}
+            />
+            <div className={styles.BlogCardBody}>
+              <h3 className={styles.BlogCardTitle}>{article.title}</h3>
+              <p className={styles.BlogCardExcerpt}>
+                {article.body?.slice(0, 150) ||
+                  "No hay contenido disponible..."}
+              </p>
+              <div className={styles.BlogCardMeta}>
+                <div className={styles.metaBlog}>
+                  <Newspaper size={30} />
+                  <p>
+                    Writer: {article.author || "Desconocido"}
+                  </p>
+                </div>
+                <div className={styles.metaBlog}>
+                  <CalendarDays size={30} />
+                  <p>Date: {article.date || "Sin fecha"}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-      </article>
+          </a>
+        </article>
+      ))}
     </div>
   );
 };

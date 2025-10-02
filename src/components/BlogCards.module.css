@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 1fr; /* 1 columna */
   justify-items: center; /* centra el contenido de cada celda */
-  gap: 20px;
+  gap: 5px;
   margin: 0 auto 3rem auto;
   padding: 0 1rem;
 }
@@ -66,7 +66,6 @@
 .BlogCardMeta {
   margin-top: auto;
   display: flex;
-  gap: 18px;
   align-items: center;
   color: var(--color-dark);
   font-size: 0.95rem;
@@ -75,9 +74,9 @@
 .metaBlog {
   display: flex;
   align-items: center;
-  gap: 6px;
-    color: var(--color-dark);
-    font-size: 0.75rem;
+  gap: 15px;
+  color: var(--color-dark);
+  font-size: 0.75rem;
 }
 
 /* Tablet */
