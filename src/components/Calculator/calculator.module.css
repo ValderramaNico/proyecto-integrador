@@ -1,0 +1,44 @@
+
+
+
+/* 🧮 Diseño de la calculadora */
+.calculadora {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  background: var(--card-bg);
+  padding: var(--gap);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+
+.container, .resultado, form {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px var(--shadow);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+li.item {
+  background: #eaf8e6;
+  padding: 8px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid var(--primary);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: aparecer 0.3s forwards;
+  color:  white;
+}
+
+.total {
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,23 @@
+
+
+.left, .right {
+  flex: 1 1 300px;
+  box-sizing: border-box;
+}
+
+
+.clearfix {
+  clear: both;
+}
+
+.container, .resultado, form {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px var(--shadow);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+
+
+
