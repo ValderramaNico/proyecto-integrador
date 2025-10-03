@@ -1,0 +1,19 @@
+
+
+.imagenCentrada {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--shadow);
+  margin-bottom: 20px;
+}
+
+.imagenCentrada2 {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--shadow);
+  margin-bottom: 20px;
+}
