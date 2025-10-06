@@ -6,8 +6,6 @@ import RelevantInfo from "./components/Home/RelevantInfo";
 import HardData from "./components/Home/HardData";
 import BlogCards from "./components/Home/BlogCards";
 
-import CalculatorView from "./views/CalculatorView";
-
 
 const App = () => {
   return (
