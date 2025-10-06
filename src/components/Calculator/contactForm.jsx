@@ -1,6 +1,7 @@
-import styles from "./contactForm.module.css";
+import { useState } from "react";
+import styles from "./ContactForm.module.css";
 
-export default function ContactForm() {
+const ContactForm = () => {
   const [form, setForm] = useState({
     nombre: "",
     telefono: "",
@@ -19,33 +20,46 @@ export default function ContactForm() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.left}>
-        <p>
-          Si tienes alguna duda, consulta o sugerencia<br />
-          <br />
-          ¡Contáctanos!
-        </p>
+    <div className={styles.body}>
+      <div className={styles.container}>
+        <div className={styles.left}>
+          <p>
+            Si tienes alguna duda, consulta o sugerencia
+            <br />
+            <br />
+            ¡Contáctanos!
+          </p>
+        </div>
+
+        <div className={styles.right}>
+          <form onSubmit={handleSubmit}>
+            <label>Nombre y Apellido</label>
+            <input name="nombre" value={form.nombre} onChange={handleChange} />
+
+            <label>Número de Telefono</label>
+            <input
+              name="telefono"
+              value={form.telefono}
+              onChange={handleChange}
+            />
+
+            <label>Correo</label>
+            <input name="correo" value={form.correo} onChange={handleChange} />
+
+            <label>Sugerencia o reclamos</label>
+            <textarea
+              name="mensaje"
+              value={form.mensaje}
+              onChange={handleChange}
+            />
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+        <div className={styles.clearfix}></div>
       </div>
-
-      <div className={styles.right}>
-        <form onSubmit={handleSubmit}>
-          <label>Nombre y Apellido</label>
-          <input name="nombre" value={form.nombre} onChange={handleChange} />
-
-          <label>Numero de Telefono</label>
-          <input name="telefono" value={form.telefono} onChange={handleChange} />
-
-          <label>Correo</label>
-          <input name="correo" value={form.correo} onChange={handleChange} />
-
-          <label>Sugerencia o reclamos</label>
-          <textarea name="mensaje" value={form.mensaje} onChange={handleChange} />
-
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-      <div className={styles.clearfix}></div>
     </div>
   );
-}
+};
+
+export default ContactForm;

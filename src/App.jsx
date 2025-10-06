@@ -1,10 +1,13 @@
 import "./App.css";
-import HeaderHome from "./components/HeaderHome";
-import HeroHome from "./components/HeroHome";
-import Phrases from "./components/Phrases";
-import RelevantInfo from "./components/RelevantInfo";
-import HardData from "./components/HardData";
-import BlogCards from "./components/BlogCards";
+import HeaderHome from "./components/Home/HeaderHome";
+import HeroHome from "./components/Home/HeroHome";
+import Phrases from "./components/Home/Phrases";
+import RelevantInfo from "./components/Home/RelevantInfo";
+import HardData from "./components/Home/HardData";
+import BlogCards from "./components/Home/BlogCards";
+
+import CalculatorView from "./views/CalculatorView";
+
 
 const App = () => {
   return (

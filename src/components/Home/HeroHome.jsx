@@ -1,5 +1,5 @@
 import styles from "./HeroHome.module.css";
-import paneles from "../assets/images/paneles-solares-sobre-techo-3.webp";
+import paneles from "../../assets/images/paneles-solares-sobre-techo-3.webp";
 
 const HeroHome = () => {
   return (
