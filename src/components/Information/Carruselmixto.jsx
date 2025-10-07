@@ -1,5 +1,5 @@
 import { useState } from "react";
-import subidaluz from "../assets/images/subida-luz.webp";
+import subidaluz from "../../assets/images/subida-luz.webp";
 import styles from "./Carruselmixto.module.css";
 
 function Carruselmixto() {
