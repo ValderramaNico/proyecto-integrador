@@ -1,5 +1,5 @@
 import styles from "./Banner.module.css";
-import eolicoPanel from "../assets/images/eolico-panel.jpg";
+import eolicoPanel from "../../assets/images/eolico-panel.jpg";
 
 const Banner = () => {
   return (
