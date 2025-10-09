@@ -16,7 +16,7 @@ export default function PostDetailView() {
     cargar();
   }, [id]);
 
-  if (!post) return <p style={{ padding: "1rem" }}>Cargando artículo...</p>;
+  if (!post) return <p style={{ padding: "1rem" }}>Cargando...</p>;
 
   return (
     <article style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
