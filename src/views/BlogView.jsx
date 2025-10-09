@@ -1,10 +1,13 @@
+import Hero from "../components/Blog/Hero";
+import PostGrid from "../components/Blog/PostGrid";
 
 const BlogView = () => {
   return (
     <div>
-      <h2>Blog View</h2>
+      <Hero />
+      <PostGrid />
     </div>
-  )
-}
+  );
+};
 
-export default BlogView
+export default BlogView;

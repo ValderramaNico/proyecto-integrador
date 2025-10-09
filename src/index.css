@@ -21,9 +21,32 @@
   --radius: 8px;
   --gap: 1rem;
   --gap-sm: 0.5rem;
+  --text-muted: #555;
+  --brand: #0b5ed7;
+  --border: 1px solid #e6e6e6;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  --radius: 12px;
+  --radius-inner: 8px;
+
+  /* dimensiones */
+  --hero-min: 40vh;
+  --card-max: 1080px; /* ancho máximo de una tarjeta por fila */
+
+  /* tamaños base (hero queda igual) */
+  --fs-hero: clamp(4rem, 12vw, 14rem);
+
+  /* tamaños originales que serán escalados en tarjetas */
+  --fs-card-title: clamp(1.05rem, 1.2vw + 0.9rem, 1.5rem);
+  --fs-card-meta: clamp(0.9rem, 0.6vw + 0.7rem, 1.05rem);
+  --fs-card-body: clamp(0.98rem, 0.7vw + 0.7rem, 1.125rem);
+
+  /* multiplicador global de UI (+50%) para tarjetas */
+  --ui-scale: 1;
 
   /* 🔤 Tipografía */
   --font-main: "poppins", sans-serif;
+  --ff-sasns: "poppins", sans-serif;
+  --ff-serif: Georgia, "Times New Roman", serif;
 
   /* 🧱 Layout */
   --radius-cards: 15px;

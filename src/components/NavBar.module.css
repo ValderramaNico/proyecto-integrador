@@ -1,0 +1,26 @@
+.navbarBg {
+    background-image: url('../assets/images/paneles-solares.webp');
+    background-size: cover;
+    height: 300px;
+    display: flex;
+
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 25px;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+}
+
+.links li {
+    color:black;
+    text-decoration:none;
+    font-weight: bold;
+    font-size: 20px;
+    
+}

@@ -1,0 +1,19 @@
+.hero {
+  width: 100%;
+  min-height: var(--hero-min);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+
+.heroTitle {
+  font-family: var(--ff-serif);        /* conserva estilo del hero */
+  font-size: var(--fs-hero);           /* NO escalado: hero queda igual */
+  color: white;
+  letter-spacing: 0.15em;
+  text-shadow: 0 6px 24px rgba(0,0,0,0.55);
+  margin: 0;
+  line-height: 0.9;
+  padding-block: 1rem;
+}

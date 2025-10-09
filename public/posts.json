@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "titulo": "Frente a alza acumulada de cuentas de la luz: paneles solares logran ahorro de hasta $63 mil mensuales en hogares",
+    "encabezado": "Paneles solares ofrecen ahorros significativos en boletas eléctricas para familias chilenas ante alzas tarifarias de 2025",
+    "desarrollo": "En medio de las alzas acumuladas en las tarifas eléctricas que han alcanzado hasta un 70% en algunos hogares chilenos durante 2025, los sistemas de paneles solares emergen como una solución efectiva para mitigar estos costos. Según expertos, un hogar típico con un consumo mensual de alrededor de $80.000 en electricidad puede reducir su boleta a solo $17.000 instalando seis paneles solares, lo que representa un ahorro de hasta $63.000 al mes. Esta tecnología permite la generación de energía limpia y renovable directamente en el techo de la vivienda, conectándose al sistema netbilling que inyecta excedentes a la red eléctrica y genera créditos para periodos de bajo sol. Para familias en regiones con alta irradiación como el norte de Chile, el retorno de inversión se logra en 4-6 años, con una vida útil de los paneles superior a 25 años. Además, se destacan incentivos como subsidios estatales que cubren parte de la instalación, haciendo accesible esta opción para hogares de ingresos medios. Sin embargo, es crucial considerar factores como la orientación del techo y el mantenimiento anual para maximizar beneficios. Esta tendencia no solo reduce la dependencia de fuentes fósiles, sino que contribuye a la sostenibilidad ambiental, alineándose con metas nacionales de transición energética. En resumen, ante la inestabilidad de precios, los paneles solares representan una inversión inteligente para hogares, promoviendo autonomía y ahorro a largo plazo. Expertos recomiendan evaluaciones gratuitas para personalizar sistemas, asegurando eficiencia en diferentes climas chilenos",
+    "enlace": "https://www.portalminero.com/wp/frente-a-alza-acumulada-de-cuentas-de-la-luz-paneles-solares-logran-ahorro-de-hasta-63-mil-mensuales-en-hogares/",
+    "fecha": "17 de julio de 2025",
+    "autor": "Felipe Esparza",
+    "imagen": "src/assets/imagenes/1.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "El futuro de la Energía Solar en Chile",
+    "encabezado": "Proyectos solares residenciales en Maule y Ñuble prometen accesibilidad y reducción de costos para hogares desde 2025",
+    "desarrollo": "El panorama de la energía solar en Chile se presenta prometedor para los hogares, con iniciativas que entrarán en operación a partir de marzo de 2025 en regiones como Maule y Ñuble. Estos proyectos enfatizan la adopción masiva en viviendas, permitiendo a familias generar su propia electricidad y reducir boletas en hasta un 50-70% anual. Con un enfoque en tecnología fotovoltaica accesible, se estima que un sistema residencial de 3-5 kW puede costar entre $3-5 millones, con subsidios que rebajan el desembolso inicial. Enel X, líder en el sector, destaca cómo estos paneles no solo bajan costos, sino que fomentan la independencia energética, especialmente en zonas rurales donde las redes tradicionales son inestables. Para 2030, se proyecta que el 20% de los hogares chilenos incorporen solar, impulsado por leyes como la de Netbilling que permiten vender excedentes. Beneficios incluyen menor huella de carbono y resiliencia ante cortes de luz, con baterías opcionales para almacenamiento nocturno. Sin embargo, desafíos como la variabilidad climática requieren planificación, como evaluaciones gratuitas de irradiación. Este avance alinea con metas nacionales de energías renovables, donde el solar ya cubre el 22% de la matriz, beneficiando directamente a familias con ahorros anuales de hasta $500.000. En esencia, la energía solar transforma hogares en productores activos, contribuyendo a un futuro sostenible y económico. Se recomienda consultar con instaladores certificados para optimizar beneficios en contextos residenciales específicos.",
+    "enlace": "https://www.enelx.com/cl/es/historias/porque-la-energia-solar-promete-un-buen-futuro",
+    "fecha": "31 de mayo de 2025",
+    "autor": "Felipe Esparza",
+    "imagen": "src/assets/imagenes/2.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "Energía solar ya representa el 40% de las ERNC en Chile",
+    "encabezado": "Crecimiento solar impulsa adopción en hogares con proyecciones de mayor expansión residencial hacia 2030",
+    "desarrollo": "La energía solar ha alcanzado un hito en Chile, representando el 40% de las Energías Renovables No Convencionales (ERNC) en 2025, con un enfoque creciente en aplicaciones residenciales. Esto se traduce en miles de hogares instalando paneles para autoconsumo, reduciendo boletas eléctricas en un 60% promedio. Con una capacidad instalada que supera los 8 GW, el sector residencial beneficia de costos decrecientes, donde un kit básico para una familia de cuatro personas cuesta alrededor de $4 millones, amortizándose en 5 años mediante ahorros y subsidios. Proyecciones indican que para 2030, el solar podría cubrir el 30% de la demanda residencial, impulsado por programas estatales que ofrecen cofinanciamiento. En regiones como Metropolitana y Valparaíso, familias reportan ahorros mensuales de $30.000-50.000, inyectando excedentes a la red vía netbilling. Ventajas incluyen independencia de fluctuaciones tarifarias y contribución ambiental, al evitar emisiones equivalentes a plantar miles de árboles por hogar. No obstante, se recomienda asesoría técnica para optimizar instalaciones, considerando factores como sombra y orientación. Este boom solar no solo democratiza la energía, sino que alinea con políticas nacionales de transición, donde el gobierno invierte en educación para promover adopción masiva. Para hogares, representa una oportunidad de inversión segura, con retornos estables y beneficios fiscales, posicionando a Chile como líder regional en solar residencial. Adicionalmente, integraciones con apps de monitoreo permiten a familias rastrear producción en tiempo real.",
+    "enlace": "https://www.reporteminero.cl/noticia/noticias/2025/05/energia-solar-chile-2025-crecimiento-proyecciones-2030",
+    "fecha": "21 de mayo de 2025",
+    "autor": "Felipe Esparza",
+    "imagen": "src/assets/imagenes/3.jpg"
+  },
+  {
+    "id": 4,
+    "titulo": "Proyecta Solar 2025 abordará desafíos del sector fotovoltaico con foco en autoconsumo",
+    "encabezado": "Evento discute soluciones solares para hogares, enfatizando autoconsumo y almacenamiento en viviendas chilenas",
+    "desarrollo": "Proyecta Solar 2025, un evento clave en el calendario energético chileno, se centra en superar barreras para la adopción solar en hogares, destacando autoconsumo y sistemas de almacenamiento. Celebrado en mayo de 2025, reúne expertos para analizar cómo familias pueden implementar paneles con baterías, logrando independencia total de la red eléctrica. Con costos iniciales de $5-7 millones para un hogar promedio, se enfatiza el ahorro a largo plazo, reduciendo boletas en un 80% y amortizando en 4-7 años. Discusiones incluyen integración de redes inteligentes, permitiendo a viviendas monitorear y optimizar consumo en tiempo real vía apps. Subsidios estatales, como aquellos del Ministerio de Energía, cubren hasta 40% de la inversión, haciendo viable para familias de ingresos medios. En regiones soleadas, como Antofagasta, hogares ya generan excedentes vendibles, contribuyendo a la matriz nacional. Desafíos abordados incluyen variabilidad solar y mantenimiento, con soluciones como paneles bifaciales y garantías extendidas. El evento proyecta un aumento del 25% en instalaciones residenciales para 2026, alineado con metas de carbono neutralidad. Para familias, esto significa no solo ahorros económicos, sino resiliencia ante alzas tarifarias y emergencias climáticas. En resumen, Proyecta Solar impulsa una revolución residencial, empoderando hogares con tecnología limpia y accesible. Participantes destacan casos reales donde familias han logrado boletas cero en periodos pico.",
+    "enlace": "https://www.reporteminero.cl/noticia/noticias/2025/05/proyecta-solar-2025-energia-solar-autoconsumo-almacenamiento-redes-inteligentes",
+    "fecha": "21 de mayo de 2025",
+    "autor": "Felipe Esparza",
+    "imagen": "src/assets/imagenes/4.jpg"
+  },
+  {
+    "id": 5,
+    "titulo": "7 Mitos y verdades sobre los paneles solares y el ahorro en las cuentas de luz",
+    "encabezado": "Desmitifica creencias sobre paneles solares, destacando ahorros reales para hogares chilenos en 2025",
+    "desarrollo": "Esta noticia aclara mitos comunes sobre paneles solares en hogares, afirmando que pueden ahorrar hasta el 100% en electricidad con instalaciones adecuadas. Un mito desmentido es que son caros: con subsidios, un sistema para una familia cuesta $3-4 millones, recuperándose en 3-5 años vía netbilling. Verdad: funcionan en climas nublados, aunque óptimos en el norte, generando energía suficiente para boletas cero en verano. Otro mito: alto mantenimiento; en realidad, requieren limpieza anual y duran 25+ años. Para hogares, el impacto es notable, con ahorros anuales de $400.000-600.000, especialmente ante alzas de 2025. Expertos recomiendan evaluar consumo familiar y orientación del techo para maximizar eficiencia. Verdad: integran baterías para uso nocturno, logrando autonomía total. Mito: no rentables en ciudades; al contrario, en Santiago, miles de viviendas ya inyectan excedentes. Esto alinea con políticas de energías renovables, reduciendo emisiones hogareñas. Desafíos incluyen trámites iniciales, pero guías estatales facilitan. En esencia, los paneles solares empoderan familias, transformando gastos en inversiones sostenibles, con beneficios fiscales y ambientales que posicionan a Chile como modelo. Adicionalmente, se menciona que en invierno, la eficiencia baja un 20-30%, pero se compensa con excedentes estivales.",
+    "enlace": "https://www.biobiochile.cl/noticias/servicios/explicado/2025/04/28/7-mitos-y-verdades-sobre-los-paneles-solares-y-el-ahorro-en-las-cuentas-de-luz-segun-experto.shtml",
+    "fecha": "27 de abril de 2025",
+    "autor": "Felipe Esparza",
+    "imagen": "src/assets/imagenes/5.jpg"
+  },
+  {
+    "id": 6,
+    "titulo": "Energía solar en el hogar: mitos, verdades y su impacto en las cuentas de la luz",
+    "encabezado": "Explora realidades de energía solar residencial, con ahorros accesibles para familias ante costos crecientes",
+    "desarrollo": "La noticia desglosa mitos y verdades sobre la energía solar en hogares chilenos, enfatizando su viabilidad económica en 2025. Verdad: familias de ingresos medios acceden mediante financiamiento sin pago inicial, con sistemas que reducen boletas en 70-90%. Mito: solo para climas desérticos; en realidad, paneles eficientes operan en todo Chile, con retornos rápidos en regiones centrales. Impacto: ahorros mensuales de $20.000-40.000, amortizando inversiones de $4-6 millones en 4 años. Se destaca netbilling, donde hogares venden excedentes, convirtiendo techos en activos. Verdad: instalación toma días, con mantenimiento mínimo y garantías de 20 años. Mito: ineficaz en invierno; baterías resuelven esto, asegurando suministro constante. Para 2025, se proyecta duplicar adopciones residenciales gracias a subsidios del gobierno, cubriendo 30-50% de costos. Beneficios ambientales incluyen reducción de CO2 equivalente a no usar autos por años. Desafíos: elegir proveedores certificados para evitar fraudes. Esta tendencia alinea con la transición energética nacional, empoderando hogares contra alzas tarifarias. En resumen, la solar residencial es una inversión inteligente, ofreciendo sostenibilidad y estabilidad financiera a familias. Expertos sugieren combinar con aislamiento térmico para potenciar ahorros.",
+    "enlace": "https://www.elmostrador.cl/agenda-pais/agenda-sustentable/2025/04/24/energia-solar-en-el-hogar-mitos-verdades-y-su-impacto-en-las-cuentas-de-la-luz/",
+    "fecha": "23 de abril de 2025",
+    "autor": "Felipe Esparza",
+    "imagen": "src/assets/imagenes/6.jpg"
+  }
+]
