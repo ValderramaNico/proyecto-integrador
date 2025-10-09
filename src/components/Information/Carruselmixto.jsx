@@ -38,7 +38,7 @@ function Carruselmixto() {
   {
       tipo: "texto",
       fondo: "yellow",
-      titulo: "Optimicemos los lavados de ropa 🧼", 
+      titulo: "Optimiza los lavados de ropa 🧼", 
       descripcion: "Utiliza programas cortos y de agua fría para lavar ropa, y carga la lavadora o lavavajillas completamente antes de usarlos. Evita el uso de la secadora: tiende la ropa siempre que sea posible."
     }
   ];
