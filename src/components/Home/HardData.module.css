@@ -10,7 +10,7 @@
 .hardData {
   display: flex;
   flex-direction: column; /* Mobile: columna */
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 2rem;
   background: var(--color-primary);
@@ -20,6 +20,8 @@
 }
 
 .dataItem {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -39,6 +41,12 @@
   align-items: center;
   gap: 0.25rem;
   font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.symbol{
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .counterWithSymbol p {

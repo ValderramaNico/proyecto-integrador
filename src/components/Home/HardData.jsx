@@ -55,21 +55,39 @@ const HardData = () => {
         <div className={styles.dataItem}>
           <div className={styles.counterWithSymbol}>
             <Counter
-              target={1500}
+              target={50000}
               duration={2500}
               startCounting={startCounting}
             />
-            <p>%</p>
           </div>
-          <p>hogares rurales sin luz</p>
+          <p className={styles.cardText}>
+            Existen alrededor de 50 mil hogares en Chile fuera de la red
+            eléctrica.
+          </p>
         </div>
         <div className={styles.dataItem}>
-          <Counter target={320} duration={2000} startCounting={startCounting} />
-          <p>No accede a la luz</p>
+          <div className={styles.counterWithSymbol}>
+            <Counter
+              target={15}
+              duration={2000}
+              startCounting={startCounting}
+            />{" "}
+            <span>%</span>
+          </div>
+          <p>
+            Porciento de los hogares sin conexión a red eléctrica acceden a
+            soluciones de generación solar.
+          </p>
         </div>
         <div className={styles.dataItem}>
-          <Counter target={25} duration={1500} startCounting={startCounting} />
-          <p>Uso promedio de un hogar</p>
+          <div className={styles.counterWithSymbol}>
+            <Counter target={3} duration={1500} startCounting={startCounting} />{" "}
+            <span>%</span>
+          </div>
+          <p>
+            Porciento del consumo eléctrico domiciliario se cubre con generación
+            residencial distribuida (principalmente solar).
+          </p>
         </div>
       </section>
     </div>

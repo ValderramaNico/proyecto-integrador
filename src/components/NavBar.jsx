@@ -1,26 +1,42 @@
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
+import bannerImg from "../../src/assets/images/banner.jpg";
 
-function Navbar() {
+export default function Header() {
   return (
-    <nav className={styles.navbarBg}>
-    <p><a href="">Tengo una duda energetica </a></p>
-      <ul className={styles.links}>
-        <li>
-          <Link to="/">Inicio</Link>
-        </li>
-        <li>
-          <Link to="/informacion">Información</Link>
-        </li>
-        <li>
-          <Link to="/calculadora">Calculadora</Link>
-        </li>
-        <li>
-          <Link to="/blog">Blog</Link>
-        </li>
-      </ul>
-    </nav>
+    <header
+      className={styles.header}
+      style={{
+        backgroundImage: `url(${bannerImg})`,
+      }}
+    >
+      {" "}
+      <div className={styles.contenedor}>
+        {" "}
+        <div className={styles.barra}>
+          {" "}
+          <Link to="/" className={styles.logo}>
+            <h1 className={`${styles.logo__nombre} no-margin`}>
+              Octa<span className={styles.logo__bold}>Bytes</span>{" "}
+            </h1>{" "}
+          </Link>
+          <nav className={styles.navegacion}>
+            <Link to="/informacion" className={styles.navegacion__enlace}>
+              Información
+            </Link>
+            <Link to="/blog" className={styles.navegacion__enlace}>
+              Blog
+            </Link>
+            <Link to="/calculadora" className={styles.navegacion__enlace}>
+              Calculadora
+            </Link>
+          </nav>
+        </div>
+        <div className={styles.header__texto}>
+          <h2 className="no-margin">Soluciones Integrales</h2>
+          <p className="no-margin">Desarrollo sustentable</p>
+        </div>
+      </div>
+    </header>
   );
 }
-
-export default Navbar;
