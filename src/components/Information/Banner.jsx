@@ -11,7 +11,6 @@ const Banner = () => {
       />
       <div className={styles.bannerOverlay}></div>
       <div className={styles.bannerContent}>
-        <h1 className={styles.bannerTitulo}>Energías Renovables</h1>
       </div>
     </section>
   );

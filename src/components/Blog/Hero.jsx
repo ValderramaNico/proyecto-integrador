@@ -7,7 +7,6 @@ export default function Hero() {
       className={styles.hero}
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <h1 className={styles.heroTitle}>BLOG</h1>
     </header>
   );
 }
