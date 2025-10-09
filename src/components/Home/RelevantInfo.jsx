@@ -1,5 +1,5 @@
 import styles from "./RelevantInfo.module.css";
-import bgImage from "../../assets/images/instalacion-paneles-solares.webp";
+import bgImage from "../../assets/images/panel-solar-campo.webp";
 
 const RelevantInfo = () => {
   return (

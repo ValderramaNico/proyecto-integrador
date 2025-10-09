@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import styles from "./NavBar.module.css";
 
 function Navbar() {
   return (
-    <nav>
-      <ul>
+    <nav className={styles.navbarBg}>
+    <p><a href="">Tengo una duda energetica </a></p>
+      <ul className={styles.links}>
         <li>
           <Link to="/">Inicio</Link>
         </li>

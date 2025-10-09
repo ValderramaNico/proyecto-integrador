@@ -4,6 +4,7 @@ import Information from "../views/InformationView";
 import Calculator from "../views/CalculatorView";
 import Blog from "../views/BlogView";
 import NavBar from "../components/NavBar";
+import PostDetailView from "../views/PostDetailView";
 
 function AppRouter() {
   return (
@@ -14,6 +15,7 @@ function AppRouter() {
         <Route path="/informacion" element={<Information />} />
         <Route path="/calculadora" element={<Calculator />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<PostDetailView />} />
       </Routes>
     </Router>
   );
