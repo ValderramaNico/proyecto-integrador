@@ -5,7 +5,7 @@ const BlogView = () => {
   return (
     <div>
       <Hero />
-      <PostGrid />
+        <PostGrid />
     </div>
   );
 };
