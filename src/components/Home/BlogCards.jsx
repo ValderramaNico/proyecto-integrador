@@ -10,8 +10,11 @@ const BlogCards = () => {
     fetch("http://localhost:5000/api/noticias")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setArticles(Array.isArray(data) ? data : []);
+        const array = Array.isArray(data) ? data : [];
+
+        const ordenados = array.sort((a, b) => (a._id < b._id ? 1 : -1));
+
+        setArticles(ordenados);
       })
       .catch((err) => console.error("Error al cargar noticias:", err));
   }, []);
