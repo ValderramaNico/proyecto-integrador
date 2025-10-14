@@ -8,9 +8,7 @@
   clear: both;
 }
 
-.container,
-.resultado,
-form {
+.container > form .resultado {
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: 0 4px 12px var(--shadow);

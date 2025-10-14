@@ -8,8 +8,8 @@
 }
 
 .heroTitle {
-  font-family: var(--ff-serif);        /* conserva estilo del hero */
-  font-size: var(--fs-hero);           /* NO escalado: hero queda igual */
+  font-family: var(--ff-serif);       
+  font-size: var(--fs-hero);   
   color: white;
   letter-spacing: 0.15em;
   text-shadow: 0 6px 24px rgba(0,0,0,0.55);

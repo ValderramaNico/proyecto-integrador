@@ -12,9 +12,7 @@
   margin-bottom: 28px;
 }
 
-.container,
-.resultado,
-form {
+.container > form .resultado {
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: 0 4px 12px var(--shadow);
@@ -130,8 +128,4 @@ li.item i {
   cursor: pointer;
   color: #f44336;
 }
-.body {
-  margin: 20px;
-  background: var(--bg-page);
-  color: var(--text);
-}
+

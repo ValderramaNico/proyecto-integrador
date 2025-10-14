@@ -5,6 +5,7 @@ import RelevantInfo from "../components/Home/RelevantInfo";
 import HardData from "../components/Home/HardData";
 import BlogCards from "../components/Home/BlogCards";
 
+
 const HomeView = () => {
   return (
     <>

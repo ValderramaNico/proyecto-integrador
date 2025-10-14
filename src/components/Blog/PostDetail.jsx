@@ -5,15 +5,15 @@ export default function PostDetail() {
   const { id } = useParams();
   const [post, setPost] = useState(null);
 
-  useEffect(() => {
-    async function cargar() {
-      const res = await fetch("/posts.json");
-      const data = await res.json();
-      const encontrado = data.find((p) => String(p.id) === id);
-      setPost(encontrado);
-    }
-    cargar();
-  }, [id]);
+useEffect(() => {
+  async function cargar() {
+    const res = await fetch(`http://localhost:5000/api/noticias/${id}`);
+    const data = await res.json();
+    setPost(data);
+  }
+  cargar();
+}, [id]);
+
 
   if (!post) return <p style={{ padding: "1rem" }}>Cargando...</p>;
 
@@ -26,7 +26,7 @@ export default function PostDetail() {
         <strong>{post.fecha}</strong>
       </p>
       <img
-        src={post.imagen}
+        src={`http://localhost:5000${post.imagen}`}
         alt={post.titulo}
         style={{ width: "100%", borderRadius: "8px" }}
       />

@@ -1,0 +1,100 @@
+/* Layout general */
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main */
+.mainContainer {
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.formWrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.postForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--color-light);
+  width: 850px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#articleBody {
+  field-sizing: content;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  padding: 0.8rem;
+  border: 1px solid var(--color-dark);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--color-light);
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #1193d4;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+}
+
+.submitButton {
+  background-color: var(--color-secondary);
+  color: white;
+  font-weight: 600;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: var(--color-primary);
+}

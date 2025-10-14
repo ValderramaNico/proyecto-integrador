@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import bannerImg from "../../src/assets/images/banner.jpg";
+import { LogIn } from "lucide-react";
+
 
 export default function Header() {
   return (
@@ -29,6 +31,9 @@ export default function Header() {
             </Link>
             <Link to="/calculadora" className={styles.navegacion__enlace}>
               Calculadora
+            </Link>
+            <Link to="/login" className={styles.navegacion__enlace}>
+              <LogIn />
             </Link>
           </nav>
         </div>
