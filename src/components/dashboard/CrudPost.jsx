@@ -76,8 +76,8 @@ const CreatePost = () => {
               <label htmlFor="imageUrl">URL de la imagen</label>
               <input
                 id="imageUrl"
-                type="url"
-                placeholder="URL de la imagen"
+                type="text"
+                placeholder="URL de la imagen o ruta local Ej: /images/1.jpg o https://ejemplo.com/imagen.jpg"
                 value={formData.imageUrl}
                 onChange={handleChange}
               />

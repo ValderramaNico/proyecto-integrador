@@ -8,10 +8,9 @@ export default function PostDetailView() {
 
   useEffect(() => {
     async function cargar() {
-      const res = await fetch("/posts.json");
+      const res = await fetch(`http://localhost:5000/api/noticias/${id}`);
       const data = await res.json();
-      const encontrado = data.find((p) => String(p.id) === id);
-      setPost(encontrado);
+      setPost(data);
     }
     cargar();
   }, [id]);
@@ -20,11 +19,11 @@ export default function PostDetailView() {
 
   return (
     <article style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
-      <h1 style={{ marginBottom: "1rem" }}>{post.titulo}</h1>
-      <p style={{ color: "#555", fontSize: "0.9rem" }}>{post.fecha}</p>
+      <h1 style={{ marginBottom: "1rem" }}>{post.title}</h1>
+      <p style={{ color: "#555", fontSize: "0.9rem" }}>{post.date}</p>
       <img
-        src={post.imagen}
-        alt={post.titulo}
+        src={post.imageUrl}
+        alt={post.title}
         style={{
           width: "100%",
           borderRadius: "10px",
@@ -32,11 +31,11 @@ export default function PostDetailView() {
           marginBottom: "1.5rem",
         }}
       />
-      <p style={{ lineHeight: "1.6", color: "#333" }}>{post.desarrollo}</p>
+      <p style={{ lineHeight: "1.6", color: "#333" }}>{post.articleBody }</p>
 
-      {post.enlace && (
+      {post.referenceUrl && (
         <p style={{ marginTop: "1.5rem" }}>
-          <a href={post.enlace} target="_blank" rel="noreferrer">
+          <a href={post.referenceUrl} target="_blank" rel="noreferrer">
             Ver publicación original
           </a>
         </p>
