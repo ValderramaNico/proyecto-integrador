@@ -1,5 +1,5 @@
 import styles from "./Bloque2.module.css";
-import casaPanel from "../assets/images/casa-panel.jpg";
+import casaPanel from "../../assets/images/casa-panel.jpg";
 
 const Bloque2 = () => {
   return (

@@ -1,7 +1,4 @@
-
-
-
-/* 🧮 Diseño de la calculadora */
+/* Diseño de la calculadora */
 .calculadora {
   max-width: 600px;
   margin: auto;
@@ -12,10 +9,10 @@
   padding: var(--gap);
   border-radius: var(--radius);
   box-shadow: 0 2px 8px var(--shadow);
+  margin-bottom: 28px;
 }
 
-
-.container, .resultado, form {
+.container > form .resultado {
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: 0 4px 12px var(--shadow);
@@ -23,7 +20,7 @@
   margin-bottom: 30px;
 }
 
-li.item {
+.item {
   background: #eaf8e6;
   padding: 8px;
   border-radius: var(--radius);
@@ -35,10 +32,100 @@ li.item {
   opacity: 0;
   transform: translateY(-10px);
   animation: aparecer 0.3s forwards;
-  color:  white;
+  color: var(--color-text);
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item:hover {
+  background: #d4edda;
+  box-shadow: 0 2px 8px var(--shadow);
 }
 
 .total {
   font-weight: bold;
   text-align: center;
 }
+
+/* Other CSS 
+
+/* 🧾 Títulos principales */
+h1,
+h2,
+.titulo {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: var(--gap);
+}
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* 🔲 Campos de entrada */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+/* ✨ Efecto al enfocar campos */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+button {
+  margin-top: 12px;
+  padding: 10px;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+button:hover {
+  background: var(--accent);
+}
+button:active {
+  transform: scale(0.98);
+}
+@media (max-width: 480px) {
+  .calculadora {
+    grid-template-columns: 1fr;
+  }
+}
+ul {
+  color: black;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+li.item i {
+  cursor: pointer;
+  color: #f44336;
+}
+

@@ -1,22 +1,8 @@
 import "./App.css";
-import HeaderHome from "./components/HeaderHome";
-import HeroHome from "./components/HeroHome";
-import Phrases from "./components/Phrases";
-import RelevantInfo from "./components/RelevantInfo";
-import HardData from "./components/HardData";
-import BlogCards from "./components/BlogCards";
+import AppRouter from "./router/AppRouter";
 
 const App = () => {
-  return (
-    <>
-      <HeaderHome />
-      <HeroHome />
-      <Phrases />
-      <RelevantInfo />
-      <HardData />
-      <BlogCards />
-    </>
-  );
+  return <AppRouter />;
 };
 
 export default App;

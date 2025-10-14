@@ -1,0 +1,39 @@
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+export default function PostDetail() {
+  const { id } = useParams();
+  const [post, setPost] = useState(null);
+
+  useEffect(() => {
+    async function cargar() {
+      const res = await fetch(`http://localhost:5000/api/noticias/${id}`);
+      const data = await res.json();
+      setPost(data);
+    }
+    cargar();
+  }, []);
+
+  if (!post) return <p style={{ padding: "1rem" }}>Cargando...</p>;
+
+  return (
+    <article
+      style={{ padding: "1rem 2rem", maxWidth: "800px", margin: "0 auto" }}
+    >
+      <h2>{post.title}</h2>
+      <p>
+        <strong>{post.date}</strong>
+      </p>
+      <img
+        src={post.imageUrl}
+        alt={post.title}
+        style={{ width: "100%", borderRadius: "8px" }}
+      />
+      <p style={{ marginTop: "1rem" }}>{post.articleBody}</p>
+      <a href={post.enlace} target="_blank" rel="noreferrer">
+        Ver publicación original
+      </a>
+      <p>{post.author}</p>
+    </article>
+  );
+}

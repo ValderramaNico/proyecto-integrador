@@ -1,5 +1,5 @@
 import styles from "./Bloque1.module.css";
-import panelSolar from "../assets/images/panel-solar.jpg";
+import panelSolar from "../../assets/images/panel-solar.jpg";
 
 const Bloque1 = () => {
   return (

@@ -5,8 +5,10 @@ const Phrases = () => {
     <div>
       <section className={styles.phrases}>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
-          voluptate.
+          Ley 20.571. También conocida como Ley Net Billing o Ley de Generación
+          Ciudadana, permite que los clientes reciban un pago por cada kWh
+          tarificado en el medidor. Pero un uso eficiente de la red eléctrica
+          como back-up
         </p>
       </section>
     </div>

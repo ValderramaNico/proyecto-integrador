@@ -1,5 +1,5 @@
 import styles from "./HeroHome.module.css";
-import paneles from "../assets/images/paneles-solares-sobre-techo-3.webp";
+import paneles from "../../assets/images/paneles-solares-sobre-techo-3.webp";
 
 const HeroHome = () => {
   return (
@@ -8,7 +8,7 @@ const HeroHome = () => {
       <div className={styles.heroContainer}>
         <div className={styles.heroText}>
           <h1>
-            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.
+            El consumo promedio de electricidad en los hogares chilenos es de aproximadamente 8.083 kWh al año, lo que representa un gasto anual de alrededor de $600.000 CLP.
           </h1>
         </div>
         <div className={styles.heroImage}>
