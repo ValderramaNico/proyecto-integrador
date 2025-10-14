@@ -182,7 +182,7 @@ li.item i {
 
 .toastButton {
   background: transparent;
-  border: 1px solid rgba(11, 19, 32, 0.08);
+  border: 1px solid rgba(11,19,32,0.08);
   padding: 6px 8px;
   border-radius: 8px;
   cursor: pointer;
@@ -190,9 +190,7 @@ li.item i {
   font-size: 13px;
 }
 
-.toastButton:hover {
-  background: rgba(0, 0, 0, 0.04);
-}
+.toastButton:hover { background: rgba(0,0,0,0.04); }
 
 .closeBtn {
   background: transparent;

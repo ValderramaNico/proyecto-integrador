@@ -1,16 +1,17 @@
+// IMPORTS (sin cambios)
 import { useState } from "react";
 import styles from "./Calculator.module.css";
+
+//  Importamos react-hot-toast
 import { toast, Toaster } from "react-hot-toast";
 
-
+/* ----------------------
+   Componente para el toast
+   ---------------------- */
 const CustomToast = ({ t, status = "info", title, message, onUndo }) => {
   // status: 'success' | 'error' | 'info'
   return (
-    <div
-      className={`${styles.toast} ${t.visible ? styles.toastEnter : ""}`}
-      role="status"
-      aria-live="polite"
-    >
+    <div className={`${styles.toast} ${t.visible ? styles.toastEnter : ""}`} role="status" aria-live="polite">
       <div className={styles.toastLeft}>
         <div className={styles.toastTitle}>
           {/* icono sencillo según status */}
@@ -45,6 +46,9 @@ const CustomToast = ({ t, status = "info", title, message, onUndo }) => {
   );
 };
 
+/* ----------------------
+   RESTO DEL COMPONENTE (igual que tu código, sólo cambié toasts)
+   ---------------------- */
 const Calculator = () => {
   const consumos = {
     estufa: 2.5,
@@ -80,17 +84,14 @@ const Calculator = () => {
     setHoras("");
 
     //  Notificación de éxito al agregar (toast bonito)
-    toast.custom(
-      (t) => (
-        <CustomToast
-          t={t}
-          status="success"
-          title="Agregado"
-          message="Electrodoméstico agregado correctamente"
-        />
-      ),
-      { duration: 2500 }
-    );
+    toast.custom((t) => (
+      <CustomToast
+        t={t}
+        status="success"
+        title="Agregado"
+        message="Electrodoméstico agregado correctamente"
+      />
+    ), { duration: 2500 });
   };
 
   const handleRemove = (index) => {
@@ -99,25 +100,23 @@ const Calculator = () => {
     setLista(lista.filter((_, i) => i !== index));
 
     // Notificación al eliminar con opción Deshacer
-    toast.custom(
-      (t) => (
-        <CustomToast
-          t={t}
-          status="info"
-          title="Eliminado"
-          message={`${removed.tipo} eliminado`}
-          onUndo={() => {
-            setLista((prev) => {
-              const copy = [...prev];
-              copy.splice(index, 0, removed);
-              return copy;
-            });
-            setTotal((prev) => prev + removed.consumo);
-          }}
-        />
-      ),
-      { duration: 4000 }
-    );
+    toast.custom((t) => (
+      <CustomToast
+        t={t}
+        status="info"
+        title="Eliminado"
+        message={`${removed.tipo} eliminado`}
+        onUndo={() => {
+          // lógica de deshacer: volver a insertar el elemento en la misma posición
+          setLista((prev) => {
+            const copy = [...prev];
+            copy.splice(index, 0, removed);
+            return copy;
+          });
+          setTotal((prev) => prev + removed.consumo);
+        }}
+      />
+    ), { duration: 4000 });
   };
 
   return (
@@ -129,7 +128,7 @@ const Calculator = () => {
         toastOptions={{
           duration: 3000,
           style: {
-            // estilo base por si muestra toasts sin custom
+            // estilo base por si muestras toasts sin custom
             borderRadius: "10px",
             background: "#111827",
             color: "#fff",
