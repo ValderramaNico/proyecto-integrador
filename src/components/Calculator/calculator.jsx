@@ -1,7 +1,7 @@
+import styles from "./calculator.module.css";
 import { useState } from "react";
-import styles from "./Calculator.module.css";
 
-const Calculator = () => {
+export default function Calculator() {
   const consumos = {
     estufa: 2.5,
     televisor: 0.3,
@@ -32,46 +32,43 @@ const Calculator = () => {
   };
 
   return (
-    <div className={styles.body}>
-      <div className={styles.calculadora}>
-        <form onSubmit={handleAdd}>
-          <label>Electrodoméstico:</label>
-          <select value={electro} onChange={(e) => setElectro(e.target.value)}>
-            <option value="">-- selecciona --</option>
-            <option value="estufa">Estufa</option>
-            <option value="televisor">Televisor</option>
-            <option value="computador">Computador</option>
-            <option value="calientacama">Calienta cama</option>
-          </select>
+    <div className={styles.calculadora}>
+      <form onSubmit={handleAdd}>
+        <label>Electrodoméstico:</label>
+        <select value={electro} onChange={(e) => setElectro(e.target.value)}>
+          <option value="">-- selecciona --</option>
+          <option value="estufa">Estufa</option>
+          <option value="televisor">Televisor</option>
+          <option value="computador">Computador</option>
+          <option value="calientacama">Calienta cama</option>
+        </select>
 
-          <label>Horas de uso:</label>
-          <input
-            type="number"
-            value={horas}
-            onChange={(e) => setHoras(e.target.value)}
-            placeholder="ej. 2"
-            min="0"
-            step="0.5"
-          />
+        <label>Horas de uso:</label>
+        <input
+          type="number"
+          value={horas}
+          onChange={(e) => setHoras(e.target.value)}
+          placeholder="ej. 2"
+          min="0"
+          step="0.5"
+        />
 
-          <button type="submit">Agregar</button>
-        </form>
+        <button type="submit">Agregar</button>
+      </form>
 
-        <div className={styles.resultado}>
-          <ul>
-            {lista.map((item, index) => (
-              <li key={index} className={styles.item}>
-                {item.tipo} – {item.horas} h × {consumos[item.tipo]} kW ={" "}
-                {item.consumo.toFixed(2)} kW
-                <button onClick={() => handleRemove(index)}>Eliminar</button>
-              </li>
-            ))}
-          </ul>
-          <div className={styles.total}>Total kW: {total.toFixed(2)}</div>
-        </div>
+      <div className={styles.resultado}>
+        <ul>
+          {lista.map((item, index) => (
+            <li key={index} className={styles.item}>
+              {item.tipo} – {item.horas} h × {consumos[item.tipo]} kW ={" "}
+              {item.consumo.toFixed(2)} kW
+              <button onClick={() => handleRemove(index)}>Eliminar</button>
+            </li>
+          ))}
+        </ul>
+        <div className={styles.total}>Total kW: {total.toFixed(2)}</div>
       </div>
     </div>
   );
-};
+}
 
-export default Calculator;
