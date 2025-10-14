@@ -1,6 +1,8 @@
 
 
 import styles from "./calculator.module.css";
+import { useState } from "react";
+
 
 export default function Calculator() {
   const consumos = {
