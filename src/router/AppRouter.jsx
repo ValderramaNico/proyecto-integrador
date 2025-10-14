@@ -6,9 +6,10 @@ import Blog from "../views/BlogView";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import PostDetailView from "../views/PostDetailView";
-import Login from "../components/dashboard/Login"
-import Dashboard from "../views/DashboardView"
-import CrudPost from "../views/CrudPostView"
+import Login from "../components/dashboard/Login";
+import Dashboard from "../views/DashboardView";
+import CrudPost from "../views/CrudPostView";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 function AppRouter() {
   return (
@@ -21,8 +22,24 @@ function AppRouter() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<PostDetailView />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/crud-post" element={<CrudPost />} />
+
+        {/* Rutas protegidas solo para admin */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/crud-post"
+          element={
+            <ProtectedRoute>
+              <CrudPost />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
       <Footer />
     </Router>

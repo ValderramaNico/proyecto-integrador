@@ -28,7 +28,7 @@ const CreatePost = () => {
 
       if (!res.ok) throw new Error("Error al crear el post");
       const data = await res.json();
-      alert("✅ Post creado correctamente");
+      alert("Post creado correctamente");
       console.log(data);
 
       // Reiniciar formulario
@@ -42,7 +42,7 @@ const CreatePost = () => {
       });
     } catch (error) {
       console.error(error);
-      alert("❌ Error al crear el post");
+      alert("Error al crear el post");
     }
   };
 
