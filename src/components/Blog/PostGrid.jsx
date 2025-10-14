@@ -11,12 +11,12 @@ export default function PostGrid() {
 
     async function cargar() {
       try {
-        const res = await fetch("/posts.json", { cache: "no-store" });
+        const res = await fetch("http://localhost:5000/api/noticias", { cache: "no-store" });
         if (!res.ok) throw new Error(`Error HTTP ${res.status}`);
         const data = await res.json();
+        console.log("📦 Noticias desde backend:", data);
 
- const normalizados = Array.isArray(data) ? data : [];
-
+        const normalizados = Array.isArray(data) ? data : [];
 
         if (!cancelado) {
           setPosts(normalizados);
@@ -45,7 +45,7 @@ export default function PostGrid() {
   return (
     <section className={styles.grid}>
       {posts.slice(0, 6).map((p) => (
-        <PostCard key={p.id} post={p} />
+        <PostCard key={p._id} post={p} />
       ))}
     </section>
   );
