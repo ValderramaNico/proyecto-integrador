@@ -64,7 +64,7 @@
    Columna derecha (formulario)
    ----------------------- */
 .right {
-  background: #0a6e11;
+  background: var(--color-light);
   border-radius: var(--radius);
   padding: calc(var(--gap) * 0.75);
   align-self: center;
@@ -124,8 +124,8 @@
 
 /* Botón principal */
 .btn {
-  background: linear-gradient(90deg, var(--primary), #ffffff);
-  color: var(--color-dark);
+  background: var(--color-secondary);
+  color: var(--color-light);
   padding: 10px 16px;
   border-radius: calc(var(--radius) - 2px);
   border: none;
