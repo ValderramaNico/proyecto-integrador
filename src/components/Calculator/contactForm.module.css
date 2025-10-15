@@ -1,8 +1,6 @@
 
 
-/* -----------------------
-   Layout general del wrapper
-   ----------------------- */
+/* Layout general del wrapper */
 .wrapper {
   padding: calc(var(--gap) * 1.25);
   display: flex;
@@ -10,7 +8,6 @@
   background: var(--bg-page);
   color: var(--text);
 }
-
 /* Card que contiene ambas columnas */
 .card {
   width: 100%;
@@ -24,10 +21,7 @@
   padding: calc(var(--gap) * 1.25);
   box-sizing: border-box;
 }
-
-/* -----------------------
-   Columna izquierda (info)
-   ----------------------- */
+/* Columna izquierda (info) */
 .left {
   padding: calc(var(--gap) * 0.75);
   display: flex;
@@ -35,20 +29,17 @@
   justify-content: center;
   gap: var(--gap-sm);
 }
-
 .title {
   margin: 0;
   color: var(--primary);
   font-size: 1.5rem;
   letter-spacing: 0.2px;
 }
-
 .lead {
   margin: 0;
   color: var(--text-muted);
   line-height: 1.45;
 }
-
 /* Lista de información adicional */
 .infoList {
   margin-top: var(--gap);
@@ -59,7 +50,6 @@
   color: var(--text-muted);
   font-size: 0.95rem;
 }
-
 /* -----------------------
    Columna derecha (formulario)
    ----------------------- */
@@ -70,21 +60,18 @@
   align-self: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
-
 /* Formulario */
 .form {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
 }
-
 /* Labels */
 .form label {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-dark);
 }
-
 /* Inputs y textarea - estilo consistente */
 .form input,
 .form textarea {
@@ -97,7 +84,6 @@
   background: #fff;
   transition: box-shadow 0.18s ease, border-color 0.18s ease, transform 0.06s ease;
 }
-
 /* Efecto en focus */
 .form input:focus,
 .form textarea:focus {
@@ -106,13 +92,11 @@
   box-shadow: 0 6px 18px rgba(249,168,37,0.14);
   transform: translateY(-1px);
 }
-
 /* Textarea concreto */
 .form textarea {
   min-height: 110px;
   resize: vertical;
 }
-
 /* Acciones: botón + hint */
 .actions {
   display: flex;
@@ -121,7 +105,6 @@
   margin-top: 0.5rem;
   flex-wrap: wrap;
 }
-
 /* Botón principal */
 .btn {
   background: var(--color-secondary);
@@ -134,13 +117,11 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   transition: transform 0.08s ease, box-shadow 0.12s ease;
 }
-
 /* Estado hover (no especificamos color fuera del gradiente) */
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(0,0,0,0.08);
 }
-
 /* Disabled */
 .btn[disabled],
 .btn[aria-disabled="true"] {
@@ -149,7 +130,6 @@
   transform: none;
   box-shadow: none;
 }
-
 /* Hint pequeño de estado */
 .hint {
   font-size: 0.85rem;
@@ -157,20 +137,17 @@
   margin-left: auto;
   white-space: nowrap;
 }
-
 /* Responsive*/
 @media (max-width: 880px) {
   .card {
     grid-template-columns: 1fr;
     padding: calc(var(--gap) * 0.9);
   }
-
   .hint {
     
     margin-left: 0;
   }
 }
-
 /* Pequeños ajustes visuales para pantallas pequeñas */
 @media (max-width: 420px) {
   .title {

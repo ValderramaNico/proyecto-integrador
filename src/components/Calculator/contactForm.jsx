@@ -9,10 +9,8 @@ export default function ContactForm() {
     correo: "",
     mensaje: "",
   });
-
   // Estado para controlar envío (simula loading)
   const [sending, setSending] = useState(false);
-
   // Maneja cambios en inputs/textarea
   // Maneja cambios en inputs/textarea
   const handleChange = (e) => {
@@ -42,7 +40,6 @@ export default function ContactForm() {
       setForm((prev) => ({ ...prev, [name]: value }));
     }
   };
-
   // Validaciones simples
   const isValidEmail = (email) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
@@ -58,21 +55,16 @@ export default function ContactForm() {
   // Maneja el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     // Validación antes de enviar
     if (!isFormValid()) {
       toast.error("Por favor completa correctamente Nombre y Correo.");
       return;
     }
-
     try {
       setSending(true);
-
       // Simulación de llamada a API (reemplaza por fetch/axios si corresponde)
       await new Promise((res) => setTimeout(res, 900));
-
       toast.success(`Gracias ${form.nombre}, tu mensaje fue enviado.`);
-
       // Reset del formulario
       setForm({ nombre: "", telefono: "", correo: "", mensaje: "" });
     } catch (err) {
@@ -82,12 +74,10 @@ export default function ContactForm() {
       setSending(false); // siempre se ejecuta
     }
   };
-
   return (
     <section className={styles.wrapper} aria-labelledby="contact-title">
       {/* Componente de react-hot-toast */}
       <Toaster position="top-right" />
-
       <div className={styles.card}>
         {/* Columna izquierda: texto / información */}
         <div className={styles.left}>
@@ -112,7 +102,6 @@ export default function ContactForm() {
             </li>
           </ul>
         </div>
-
         {/* Columna derecha: formulario */}
         <div className={styles.right}>
           <form className={styles.form} onSubmit={handleSubmit} noValidate>
@@ -128,7 +117,6 @@ export default function ContactForm() {
               aria-required="true"
               aria-invalid={form.nombre.trim().length < 2}
             />
-
             {/* Teléfono */}
             <label htmlFor="telefono">Número de Teléfono</label>
             <input
@@ -139,7 +127,6 @@ export default function ContactForm() {
               value={form.telefono}
               onChange={handleChange}
             />
-
             {/* Correo */}
             <label htmlFor="correo">Correo</label>
             <input
@@ -152,7 +139,6 @@ export default function ContactForm() {
               aria-required="true"
               aria-invalid={!isValidEmail(form.correo)}
             />
-
             {/* Mensaje */}
             <label htmlFor="mensaje">Sugerencia o reclamos</label>
             <textarea
@@ -163,7 +149,6 @@ export default function ContactForm() {
               onChange={handleChange}
               rows="5"
             />
-
             {/* Botón de envío: deshabilitado si inválido o en envío */}
             <div className={styles.actions}>
               <button
@@ -174,7 +159,6 @@ export default function ContactForm() {
               >
                 {sending ? "Enviando..." : "Enviar"}
               </button>
-
               {/* Pequeño hint de validación */}
               <span className={styles.hint}>
                 {isFormValid()
