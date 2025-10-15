@@ -1,8 +1,6 @@
-// contactForm.jsx
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import styles from "./contactForm.module.css";
-
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -14,15 +12,46 @@ export default function ContactForm() {
   // Estado para controlar envío (simula loading)
   const [sending, setSending] = useState(false);
   // Maneja cambios en inputs/textarea
+  // Maneja cambios en inputs/textarea
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+
+    // Si el input es teléfono, formatea automáticamente
+    if (name === "telefono") {
+      // Eliminamos todo lo que no sea número
+      let numbers = value.replace(/\D/g, "");
+
+      // Si empieza con 56, lo mantenemos, si no, lo agregamos
+      if (!numbers.startsWith("56")) {
+        numbers = "56" + numbers;
+      }
+
+      // Limitamos a 11 dígitos totales (56 + 9 + 8 números)
+      numbers = numbers.slice(0, 11);
+
+      // Aplicamos formato +56 x xxxxxxxx
+      let formatted = "+56";
+      if (numbers.length > 2) formatted += " " + numbers[2]; // el 9
+      if (numbers.length > 3) formatted += " " + numbers.slice(3, 11); // los 8 números finales
+
+      setForm((prev) => ({ ...prev, telefono: formatted }));
+    } else {
+      // para los demás campos, sin cambios
+      setForm((prev) => ({ ...prev, [name]: value }));
+    }
   };
   // Validaciones simples
   const isValidEmail = (email) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+
+  // Validación de teléfono chileno: +56 x xxxxxxxx
+  const isValidPhone = (phone) => /^\+56\s\d\s\d{8}$/.test(phone.trim());
+
   const isFormValid = () =>
-    form.nombre.trim().length >= 2 && isValidEmail(form.correo);
+    form.nombre.trim().length >= 2 &&
+    isValidEmail(form.correo) &&
+    isValidPhone(form.telefono);
+
   // Maneja el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,10 +84,12 @@ export default function ContactForm() {
           <h1 id="contact-title" className={styles.title}>
             ¿Tienes alguna duda?
           </h1>
-          <h1><p className={styles.lead}>
-            Escríbenos y te responderemos lo antes posible. También puedes
-            dejarnos tu teléfono para que te contactemos.
-          </p></h1>
+          <h1>
+            <p className={styles.lead}>
+              Escríbenos y te responderemos lo antes posible. También puedes
+              dejarnos tu teléfono para que te contactemos.
+            </p>
+          </h1>
           <ul className={styles.infoList}>
             <li>
               <strong>Horario:</strong> Lun - Vie 9:00 Hrs - 18:00 Hrs
@@ -91,7 +122,7 @@ export default function ContactForm() {
             <input
               id="telefono"
               name="telefono"
-              type="number"
+              type="tel"
               placeholder="+56 9 1234 5678"
               value={form.telefono}
               onChange={handleChange}

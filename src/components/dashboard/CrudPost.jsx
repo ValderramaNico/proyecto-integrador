@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./CrudPost.module.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const CreatePost = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +20,17 @@ const CreatePost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Validación simple antes de enviar
+    if (
+      !formData.title ||
+      !formData.articleBody ||
+      !formData.author ||
+      !formData.date
+    ) {
+      toast.error("Por favor, completa todos los campos obligatorios");
+      return;
+    }
+
     try {
       const res = await fetch("http://localhost:5000/api/noticias", {
         method: "POST",
@@ -28,8 +40,8 @@ const CreatePost = () => {
 
       if (!res.ok) throw new Error("Error al crear el post");
       const data = await res.json();
-      alert("✅ Post creado correctamente");
-      console.log(data);
+
+      toast.success("Post creado correctamente");
 
       // Reiniciar formulario
       setFormData({
@@ -40,9 +52,11 @@ const CreatePost = () => {
         date: "",
         referenceUrl: "",
       });
+
+      console.log(data);
     } catch (error) {
       console.error(error);
-      alert("❌ Error al crear el post");
+      toast.error("Error al crear el post");
     }
   };
 
@@ -139,6 +153,7 @@ const CreatePost = () => {
           </form>
         </div>
       </main>
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 };

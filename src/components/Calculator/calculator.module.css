@@ -52,8 +52,8 @@
   text-align: center;
 }
 
-/* Other CSS 
-
+/* Other CSS
+ 
 /* 🧾 Títulos principales */
 h1,
 h2,
@@ -129,3 +129,73 @@ li.item i {
   color: #f44336;
 }
 
+/* /////////////////////////////////// */
+/* Toast básico */
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(3, 7, 18, 0.12);
+  background: linear-gradient(180deg, #fff 0%, #f7f9fc 100%);
+  color: #0b1320;
+  min-width: 260px;
+  max-width: 380px;
+  border: 1px solid rgba(11, 19, 32, 0.06);
+  transform-origin: top right;
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.toastEnter {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.toastLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toastTitle {
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toastMessage {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.toastActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toastButton {
+  background: transparent;
+  border: 1px solid rgba(11,19,32,0.08);
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.toastButton:hover { background: rgba(0,0,0,0.04); }
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.7;
+}
