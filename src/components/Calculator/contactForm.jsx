@@ -1,7 +1,10 @@
+// contactForm.jsx
 import { useState } from "react";
-import styles from "./ContactForm.module.css";
+import toast, { Toaster } from "react-hot-toast";
+import styles from "./contactForm.module.css";
 
-const ContactForm = () => {
+
+export default function ContactForm() {
   const [form, setForm] = useState({
     nombre: "",
     telefono: "",
@@ -9,57 +12,150 @@ const ContactForm = () => {
     mensaje: "",
   });
 
+  // Estado para controlar envío (simula loading)
+  const [sending, setSending] = useState(false);
+
+  // Maneja cambios en inputs/textarea
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  // Validaciones simples
+  const isValidEmail = (email) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+
+  const isFormValid = () =>
+    form.nombre.trim().length >= 2 && isValidEmail(form.correo);
+
+  // Maneja el envío del formulario
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(`Gracias ${form.nombre}, tu mensaje fue enviado.`);
-    setForm({ nombre: "", telefono: "", correo: "", mensaje: "" });
+
+    // Validación antes de enviar
+    if (!isFormValid()) {
+      toast.error("Por favor completa correctamente Nombre y Correo.");
+      return;
+    }
+
+    try {
+      setSending(true);
+
+      // Simulación de llamada a API (reemplaza por fetch/axios si corresponde)
+      await new Promise((res) => setTimeout(res, 900));
+
+      toast.success(`Gracias ${form.nombre}, tu mensaje fue enviado.`);
+
+      // Reset del formulario
+      setForm({ nombre: "", telefono: "", correo: "", mensaje: "" });
+    } catch (err) {
+      console.error("Error al enviar:", err);
+      toast.error("Ocurrió un error. Intenta nuevamente.");
+    } finally {
+      setSending(false); // siempre se ejecuta
+    }
   };
 
   return (
-    <div className={styles.body}>
-      <div className={styles.container}>
+    <section className={styles.wrapper} aria-labelledby="contact-title">
+      {/* Componente de react-hot-toast */}
+      <Toaster position="top-right" />
+
+      <div className={styles.card}>
+        {/* Columna izquierda: texto / información */}
         <div className={styles.left}>
-          <p>
-            Si tienes alguna duda, consulta o sugerencia
-            <br />
-            <br />
-            ¡Contáctanos!
-          </p>
+          <h1 id="contact-title" className={styles.title}>
+            ¿Tienes alguna duda?
+          </h1>
+          <h1><p className={styles.lead}>
+            Escríbenos y te responderemos lo antes posible. También puedes
+            dejarnos tu teléfono para que te contactemos.
+          </p></h1>
+          <ul className={styles.infoList}>
+            <li>
+              <strong>Horario:</strong> Lun - Vie 9:00 Hrs - 18:00 Hrs
+            </li>
+            <li>
+              <strong>Teléfono:</strong> +56 9 1234 5678
+            </li>
+            <li>
+              <strong>Correo:</strong> admi@octabytes.cl
+            </li>
+          </ul>
         </div>
 
+        {/* Columna derecha: formulario */}
         <div className={styles.right}>
-          <form onSubmit={handleSubmit}>
-            <label>Nombre y Apellido</label>
-            <input name="nombre" value={form.nombre} onChange={handleChange} />
-
-            <label>Número de Telefono</label>
+          <form className={styles.form} onSubmit={handleSubmit} noValidate>
+            {/* Nombre */}
+            <label htmlFor="nombre">Nombre y Apellido</label>
             <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              placeholder="Ej: Miguel Pineda"
+              value={form.nombre}
+              onChange={handleChange}
+              aria-required="true"
+              aria-invalid={form.nombre.trim().length < 2}
+            />
+
+            {/* Teléfono */}
+            <label htmlFor="telefono">Número de Teléfono</label>
+            <input
+              id="telefono"
               name="telefono"
+              type="number"
+              placeholder="+56 9 1234 5678"
               value={form.telefono}
               onChange={handleChange}
             />
 
-            <label>Correo</label>
-            <input name="correo" value={form.correo} onChange={handleChange} />
-
-            <label>Sugerencia o reclamos</label>
-            <textarea
-              name="mensaje"
-              value={form.mensaje}
+            {/* Correo */}
+            <label htmlFor="correo">Correo</label>
+            <input
+              id="correo"
+              name="correo"
+              type="email"
+              placeholder="tu@correo.cl"
+              value={form.correo}
               onChange={handleChange}
+              aria-required="true"
+              aria-invalid={!isValidEmail(form.correo)}
             />
 
-            <button type="submit">Enviar</button>
+            {/* Mensaje */}
+            <label htmlFor="mensaje">Sugerencia o reclamos</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="Escribe tu mensaje aquí..."
+              value={form.mensaje}
+              onChange={handleChange}
+              rows="5"
+            />
+
+            {/* Botón de envío: deshabilitado si inválido o en envío */}
+            <div className={styles.actions}>
+              <button
+                type="submit"
+                className={styles.btn}
+                disabled={!isFormValid() || sending}
+                aria-disabled={!isFormValid() || sending}
+              >
+                {sending ? "Enviando..." : "Enviar"}
+              </button>
+
+              {/* Pequeño hint de validación */}
+              <span className={styles.hint}>
+                {isFormValid()
+                  ? "Listo para enviar"
+                  : "Nombre (min 2) y correo válido requerido"}
+              </span>
+            </div>
           </form>
         </div>
-        <div className={styles.clearfix}></div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default ContactForm;
+}
