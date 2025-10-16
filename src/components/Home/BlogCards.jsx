@@ -37,11 +37,11 @@ const BlogCards = () => {
               </p>
               <div className={styles.BlogCardMeta}>
                 <div className={styles.metaBlog}>
-                  <Newspaper size={30} />
+                  <Newspaper size={20} />
                   <p>Writer: {article.author || "Desconocido"}</p>
                 </div>
                 <div className={styles.metaBlog}>
-                  <CalendarDays size={30} />
+                  <CalendarDays size={20} />
                   <p>Date: {article.date || "Sin fecha"}</p>
                 </div>
               </div>
