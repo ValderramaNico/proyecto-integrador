@@ -5,7 +5,7 @@
 }
 
 .dashboardContainer > h2 {
-    text-align:left;
+  text-align: left;
 }
 
 .title {
@@ -20,15 +20,27 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   padding: 30px 40px;
-  width: 70%;              /* alargada hacia la derecha */
+  width: 70%;
   max-width: 900px;
+
+  /* 🔧 Clave para alinear texto e imagen lado a lado */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor del texto */
+.cardContent {
+  flex: 1;
+}
 
 .cardTitle {
   font-size: 1.4rem;
@@ -54,4 +66,30 @@
 
 .cardButton:hover {
   background-color: #1b5e20;
+}
+
+/* Imagen al lado derecho */
+.cardImageContainer {
+  flex-shrink: 0;
+  margin-left: 2rem;
+}
+
+.cardImage {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 🔹 Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cardImageContainer {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
 }
