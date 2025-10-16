@@ -76,7 +76,16 @@ export default function ContactForm() {
     }
   };
   return (
-    <section className={`${styles.wrapper} ${styles.bgImage}`} style={{ backgroundImage: `url(${panelSolar2})` }} aria-labelledby="contact-title">
+    <section
+      className={`${styles.wrapper} ${styles.bgImage}`}
+      style={{
+        backgroundImage: `url(${panelSolar2})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+      aria-labelledby="contact-title"
+    >
       {/* Componente de react-hot-toast */}
       <Toaster position="top-right" />
       <div className={styles.card}>

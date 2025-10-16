@@ -10,6 +10,7 @@
   border-radius: var(--radius);
   box-shadow: 0 2px 8px var(--shadow);
   margin-bottom: 28px;
+  color: #555555;
 }
 
 .container > form .resultado {
