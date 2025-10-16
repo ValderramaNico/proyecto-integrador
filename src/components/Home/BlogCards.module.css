@@ -67,6 +67,7 @@
   margin-top: auto;
   display: flex;
   align-items: center;
+  gap: 35px;
   color: var(--color-dark);
   font-size: 0.95rem;
 }
@@ -74,9 +75,9 @@
 .metaBlog {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   color: var(--color-dark);
-  font-size: 0.75rem;
+  font-size: 0.65rem;
 }
 
 /* Tablet */
