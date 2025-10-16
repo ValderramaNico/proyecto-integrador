@@ -1,6 +1,7 @@
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import styles from "./contactForm.module.css";
+import panelSolar2 from "../../assets/images/paneles-solares-sobre-techo.webp";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -75,7 +76,7 @@ export default function ContactForm() {
     }
   };
   return (
-    <section className={styles.wrapper} aria-labelledby="contact-title">
+    <section className={`${styles.wrapper} ${styles.bgImage}`} style={{ backgroundImage: `url(${panelSolar2})` }} aria-labelledby="contact-title">
       {/* Componente de react-hot-toast */}
       <Toaster position="top-right" />
       <div className={styles.card}>
